@@ -64,9 +64,10 @@ export class CovidComponent implements OnInit, AfterViewInit {
     plugins: {
       datalabels: {
         formatter: (value, ctx) => {
-          const label = ctx.chart.data.labels[ctx.dataIndex];
-          return label;
-        },
+          const percentage = value + '%';
+          return percentage;
+      },
+      color: 'black',
       },
     }
   };
