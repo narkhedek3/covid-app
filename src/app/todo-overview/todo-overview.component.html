@@ -1,0 +1,12 @@
+{{ data | customAsync }}
+{{ lastUpdate | async }}
+<br />
+<button (click)="addTodo();">add</button>
+<br />
+<td>
+    <tr *ngFor="let t of todos | async">
+        <ul>
+            <li>{{t.id}}</li>
+        </ul>
+    </tr>
+</td>

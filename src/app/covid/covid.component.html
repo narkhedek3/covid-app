@@ -1,0 +1,13 @@
+
+<input type="text" [(ngModel)]="country" placeholder="enter country"> &nbsp;&nbsp;&nbsp;
+<button (click)="search()">Search</button>
+
+<br />
+
+
+<ul *ngIf="countryWiseData">
+    <li>Total Cases: <span style="color: blue;"> {{ countryWiseData.cases }} </span></li>
+</ul>
+
+
+
