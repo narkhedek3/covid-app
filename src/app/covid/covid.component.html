@@ -5,8 +5,16 @@
 <br />
 
 
-<ul *ngIf="countryWiseData">
+<ul *ngIf="countryWiseData && !errorMsg">
     <li>Total Cases: <span style="color: blue;"> {{ countryWiseData.cases }} </span></li>
+    <li>Active: <span style="color: blue;"> {{ countryWiseData.active }} </span></li>
+    <li>Recovered: <span style="color: blue;"> {{ countryWiseData.recovered }} </span></li>
+    <li>Deaths: <span style="color: blue;"> {{ countryWiseData.deaths }} </span></li>
+    <li>Tests: <span style="color: blue;"> {{ countryWiseData.tests }} </span></li>
+</ul>
+
+<ul *ngIf="errorMsg && !countryWiseData">
+    <li>Error: <span style="color: blue;"> {{ errorMsg }} </span></li>
 </ul>
 
 

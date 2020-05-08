@@ -124,6 +124,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "reduxStore"
+    }
+  },
+  "defaultProject": "reduxStore",
+  "cli": {
+    "analytics": false
+  }
 }
