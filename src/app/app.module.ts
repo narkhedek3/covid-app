@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { NgRedux, NgReduxModule } from '@angular-redux/store';
 import { IAppState, rootReducer, INITIAL_STATE } from './store';
 import { Ng2SmartTableModule } from 'ng2-smart-table';
+import { ChartsModule } from 'ng2-charts';
 
 import { AppComponent } from './app.component';
 import { TodoOverviewComponent } from './todo-overview/todo-overview.component';
@@ -27,7 +28,8 @@ import { CovidComponent } from './covid/covid.component';
     NgReduxModule,
     FormsModule,
     HttpClientModule,
-    Ng2SmartTableModule
+    Ng2SmartTableModule,
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
