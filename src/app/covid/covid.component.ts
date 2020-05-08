@@ -104,11 +104,11 @@ export class CovidComponent implements OnInit, AfterViewInit {
       this.pieChartLabels = ['cases', 'active', 'recovered', 'deaths', 'tests'];
       const total = cases + active + recovered + deaths + tests;
       this.pieChartData = [
-        parseInt(((cases / total) * 100).toFixed(2), 10),
-        parseInt(((active / total) * 100).toFixed(2), 10),
-        parseInt(((recovered / total) * 100).toFixed(2), 10),
-        parseInt(((deaths / total) * 100).toFixed(2), 10),
-        parseInt(((tests / total) * 100).toFixed(2), 10)
+        parseFloat(((cases / total) * 100).toFixed(2)),
+        parseFloat(((active / total) * 100).toFixed(2)),
+        parseFloat(((recovered / total) * 100).toFixed(2)),
+        parseFloat(((deaths / total) * 100).toFixed(2)),
+        parseFloat(((tests / total) * 100).toFixed(2))
       ];
       this.pieChartColors = [{ backgroundColor: ['blue', 'orange', 'green', 'red', 'gray'] }];
     }, err => {
