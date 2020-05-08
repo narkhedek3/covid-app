@@ -102,7 +102,14 @@ export class CovidComponent implements OnInit, AfterViewInit {
       const { cases, active, recovered, deaths, tests } = data;
       this.errorMsg = undefined;
       this.pieChartLabels = ['cases', 'active', 'recovered', 'deaths', 'tests'];
-      this.pieChartData = [cases, active, recovered, deaths, tests];
+      const total = cases + active + recovered + deaths + tests;
+      this.pieChartData = [
+        (cases / total) * 100,
+        (active / total) * 100,
+        (recovered / total) * 100,
+        (deaths / total) * 100,
+        (tests / total) * 100
+      ];
       this.pieChartColors = [{ backgroundColor: ['blue', 'orange', 'green', 'red', 'gray'] }];
     }, err => {
       this.errorMsg = 'Not available in database';
